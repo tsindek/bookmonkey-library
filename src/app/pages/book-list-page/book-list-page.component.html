@@ -1,2 +1,3 @@
 <h2>Book List</h2>
-<book-card *ngFor="let book of books | async" [bookData]="book"></book-card>
+<input type="string" [(ngModel)]="searchTerm">
+<book-card *ngFor="let book of (books$ | async | filterPipe:searchTerm)" [bookData]="book"></book-card>
