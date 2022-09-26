@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BookCardComponent } from 'src/app/components/book-card/book-card.component';
 import { Book } from 'src/app/interfaces/book';
 import { BookApiService } from 'src/app/services/book-api.service';
 import { Observable } from 'rxjs';
@@ -10,11 +9,12 @@ import { Observable } from 'rxjs';
   styleUrls: ['./book-list-page.component.scss'],
 })
 export class BookListPageComponent implements OnInit {
-  books: Observable<Book[]>;
+  books$!: Observable<Book[]>;
+  searchTerm = '';
 
-  constructor(private bookApi: BookApiService) {
-    this.books = this.bookApi.getBooks();
+  constructor(private bookApi: BookApiService) {}
+
+  ngOnInit(): void {
+    this.books$ = this.bookApi.getBooks();
   }
-
-  ngOnInit(): void {}
 }
