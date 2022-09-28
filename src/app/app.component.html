@@ -1,1 +1,8 @@
-<administration-page></administration-page>
+<nav>
+    <ul>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Book List</a></li>
+        <li><a routerLink="/administration" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact:true}">Administration Page</a></li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
