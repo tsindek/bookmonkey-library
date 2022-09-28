@@ -12,4 +12,11 @@ export class BookApiService {
   getBooks(): Observable<Book[]> {
     return this.http.get<Book[]>('http://localhost:4730/books/');
   }
+
+  addBook(body: Book): Observable<Book> {
+    const headers = { 'Content-Type': 'application/json' };
+    return this.http.post<Book>('http://localhost:4730/books/', body, {
+      headers: headers,
+    });
+  }
 }
