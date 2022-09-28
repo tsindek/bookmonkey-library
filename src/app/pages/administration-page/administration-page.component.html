@@ -1,0 +1,14 @@
+<h2>Adminstration</h2>
+<form action="" name="addBookForm">
+    <label for="addBookTitle">Title</label>
+    <input type="text" name="addBookTitle" [(ngModel)]="bookTitle">
+    <label for="addBookSubtitle">Subtitle</label>
+    <input type="text" name="addBookSubtitle" [(ngModel)]="bookSubtitle">
+    <label for="addBookAuthor">Author</label>
+    <input type="text" name="addBookAuthor" [(ngModel)]="bookAuthor">
+    <label for="addBookIsbn">ISBN</label>
+    <input type="text" name="addBookIsbn" [(ngModel)]="bookIsbn">
+    <label for="addBookDescription">Description:</label>
+    <input type="textbox" name="addBookDescription" [(ngModel)]="bookDescription">
+    <button (click)="addBook()">Add Book</button>
+</form>

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { BookCardComponent } from './components/book-card/book-card.component';
 import { BookListPageComponent } from './pages/book-list-page/book-list-page.component';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
+import { AdministrationPageComponent } from './pages/administration-page/administration-page.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FilterPipePipe } from './pipes/filter-pipe.pipe';
     BookCardComponent,
     BookListPageComponent,
     FilterPipePipe,
+    AdministrationPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
